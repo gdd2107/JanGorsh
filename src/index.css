@@ -1,0 +1,1004 @@
+body {
+  background: url('./assets/images/hero-bg.jpg') center/cover no-repeat fixed;
+  min-height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000;
+  color: white;
+}
+
+.App {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+.social-icons .icon {
+  margin-right: 15px;
+  color: white;
+  font-size: 18px;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.menu-toggle {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+.hero-section {
+  height: 100vh;
+  background: url(assets/images/icons/лес.webp) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 5%;
+  position: relative;
+  margin: 0;
+  max-width: none;
+}
+
+.hero-title {
+  font-family: 'Georgia', serif;
+  font-size: 64px;
+  line-height: 1.1;
+  font-weight: normal;
+  margin: 0 0 24px 0;
+  text-align: left;
+  width: 100%;
+}
+
+.hero-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ccc;
+  margin: 0 0 32px 0;
+  text-align: left;
+  width: 100%;
+  max-width: 600px;
+}
+
+.hero-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 14px 40px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  display: inline-block;
+}
+
+.hero-button:hover {
+  background: #c0392b;
+}
+
+/* Navigation styles */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 5%;
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  color: white;
+}
+
+.social-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.social-icon {
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.company-name {
+  font-family: 'Georgia', serif;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+}
+
+.spacer {
+  width: 32px;
+}
+
+/* Search Bar — обновлённый стиль */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 12px 20px;
+  margin-top: 40px; /* ← отступ ТОЛЬКО сверху, от кнопки */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  max-width: 500px; /* чтобы не растягивался на всю ширину */
+  width: 100%;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 4px 8px;
+}
+
+.search-icon {
+  font-size: 18px;
+  color: #666;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* Featured Card */
+.featured-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #4a8fa0;
+  padding: 15px 20px;
+  margin: 0 5% 20px;
+  border-radius: 8px;
+  position: relative;
+  z-index: 50; /* Добавляем z-index */
+}
+
+.nav-icon {
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.left {
+  position: absolute;
+  left: 20px;
+}
+
+.right {
+  position: absolute;
+  right: 20px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: white;
+}
+
+/* Контейнер для контента после HeroSection */
+.content-container {
+  position: relative;
+  z-index: 50;
+  background: #ffff
+}
+
+/* ========== Travel Cards Section ========== */
+/* ========== Travel Cards Section ========== */
+.travel-cards-section {
+  padding: 80px 5%;
+  background: #000;
+  text-align: center;
+}
+
+.cards-title {
+  font-family: 'Georgia', serif;
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  color: white;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  height: 280px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Фоны через CSS */
+.card-1 {
+  background-image: url(assets/images/icons/лес.webp);
+}
+
+.card-2 {
+  background-image: url(assets/images/река.webp);
+}
+
+.card-3 {
+  background-image: url(assets/images/кулшариф.webp);
+}
+
+.card-4 {
+  background-image: url(assets/images/храм2.webp);
+}
+
+/* ========== Testimonials Section ========== */
+.testimonials-section {
+  display: flex;
+  padding: 80px 5%;
+  background: #000;
+  gap: 60px;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Карточка статьи с фоном */
+.article-card {
+  flex: 1;
+  height: 520px;
+  border-radius: 12px;
+  background: url(assets/images/горыирека.webp) no-repeat center center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Тёмный оверлей для читаемости текста */
+.article-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* полупрозрачный чёрный */
+  z-index: 1;
+}
+
+/* Контент поверх фона */
+.article-content {
+  position: relative;
+  z-index: 2;
+  padding: 60px;
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featured-badge {
+  background: #E8594E;
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  align-self: flex-start;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.article-title {
+  font-family: 'Georgia', serif;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  max-width: 90%;
+}
+
+.article-text {
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 32px;
+  max-width: 90%;
+}
+
+.read-article-btn {
+  background: #73AFBA;
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  align-self: flex-start;
+}
+
+.read-article-btn:hover {
+  opacity: 0.9;
+}
+
+/* Правая колонка — отзывы */
+.testimonials-side {
+  flex: 1;
+  background: #3C4A51;
+  padding: 40px;
+  border-radius: 12px;
+  color: white;
+}
+
+.testimonials-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.testimonials-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.testimonial-card {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.avatar-placeholder {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #556B73;
+  flex-shrink: 0;
+}
+
+.testimonial-content {
+  flex: 1;
+}
+
+.testimonial-text {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.testimonial-date {
+  font-size: 13px;
+  color: #a0b0b8;
+}
+
+/* ========== Video Slider Section — С ФУНКЦИОНАЛЬНОСТЬЮ ========== */
+.video-slider-section {
+  padding: 100px 5% 120px;
+  background: #ffffff;
+  position: relative;
+  z-index: 10;
+}
+
+.slider-header {
+  max-width: 700px;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+.slider-title {
+  font-family: 'Georgia', serif;
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  color: #222;
+  line-height: 1.2;
+}
+
+.slider-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Контейнер для слайдера */
+.slider-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Обертка карусели */
+.carousel-wrapper {
+  position: relative;
+  overflow: visible;
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+/* Дорожка слайдов */
+.carousel-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+/* Стили для всех слайдов */
+.slide-item {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.5s ease;
+  flex-shrink: 0;
+  will-change: transform, opacity;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slide-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+/* Анимация при наведении на центральный слайд */
+.slide-center:hover img {
+  transform: scale(1.03);
+}
+
+/* Левый слайд */
+.slide-left {
+  width: 280px;
+  height: 420px;
+  transform: translateX(-30%);
+  opacity: 0.7;
+  z-index: 1;
+  filter: brightness(0.9);
+  cursor: pointer;
+}
+
+.slide-left:hover {
+  opacity: 0.8;
+  transform: translateX(-30%) scale(1.02);
+}
+
+/* Центральный слайд */
+.slide-center {
+  width: 340px;
+  height: 500px;
+  z-index: 2;
+  transform: translateX(0);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Правый слайд */
+.slide-right {
+  width: 280px;
+  height: 420px;
+  transform: translateX(30%);
+  opacity: 0.7;
+  z-index: 1;
+  filter: brightness(0.9);
+  cursor: pointer;
+}
+
+.slide-right:hover {
+  opacity: 0.8;
+  transform: translateX(30%) scale(1.02);
+}
+
+/* Стрелки навигации - УВЕЛИЧЕНЫ ОТСТУПЫ */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 28px;
+  color: #333;
+  cursor: pointer;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.slider-arrow:hover {
+  background: #f0f0f0;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.slider-arrow:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+/* БОЛЬШОЙ ОТСТУП ОТ ФОТОГРАФИЙ */
+.prev-arrow {
+  left: -60px; /* УВЕЛИЧЕНО с -25px до -60px */
+}
+
+.next-arrow {
+  right: -60px; /* УВЕЛИЧЕНО с -25px до -60px */
+}
+
+/* Индикаторы слайдов */
+.slider-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 50px; /* УВЕЛИЧЕНО с 40px */
+}
+
+.slider-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.slider-indicator:hover {
+  background: #bbb;
+  transform: scale(1.2);
+}
+
+.slider-indicator.active {
+  background: #e74c3c;
+  transform: scale(1.3);
+}
+
+/* Анимация перехода слайдов */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 0.7;
+    transform: translateX(-30%);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 0.7;
+    transform: translateX(30%);
+  }
+}
+
+@keyframes slideInCenter {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Применяем анимацию при смене слайдов */
+.slide-left {
+  animation: slideInLeft 0.5s ease forwards;
+}
+
+.slide-center {
+  animation: slideInCenter 0.5s ease forwards;
+}
+
+.slide-right {
+  animation: slideInRight 0.5s ease forwards;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+  .carousel-track {
+    gap: 30px;
+  }
+  
+  .slide-left,
+  .slide-right {
+    width: 240px;
+    height: 360px;
+  }
+  
+  .slide-center {
+    width: 300px;
+    height: 440px;
+  }
+  
+  /* Уменьшаем отступы для планшетов */
+  .prev-arrow {
+    left: -40px;
+  }
+  
+  .next-arrow {
+    right: -40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .prev-arrow {
+    left: -30px;
+  }
+  
+  .next-arrow {
+    right: -30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-slider-section {
+    padding: 60px 5% 80px;
+  }
+  
+  .slider-title {
+    font-size: 36px;
+  }
+  
+  .carousel-wrapper {
+    height: 400px;
+  }
+  
+  .carousel-track {
+    gap: 20px;
+  }
+  
+  .slide-left,
+  .slide-right {
+    width: 180px;
+    height: 270px;
+  }
+  
+  .slide-center {
+    width: 240px;
+    height: 360px;
+  }
+  
+  .slider-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+  }
+  
+  .prev-arrow {
+    left: -25px;
+  }
+  
+  .next-arrow {
+    right: -25px;
+  }
+  
+  .slider-indicators {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-track {
+    gap: 15px;
+  }
+  
+  .slide-left,
+  .slide-right {
+    width: 140px;
+    height: 210px;
+  }
+  
+  .slide-center {
+    width: 200px;
+    height: 300px;
+  }
+  
+  .slider-arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+  
+  .prev-arrow {
+    left: -15px;
+  }
+  
+  .next-arrow {
+    right: -15px;
+  }
+}
+
+/* ========== Footer ========== */
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 60px 5% 30px;
+  margin-top: 60px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 50px;
+}
+
+.footer-section {
+  margin-bottom: 20px;
+}
+
+.footer-heading {
+  font-family: 'Georgia', serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 300;
+  transition: color 0.3s ease;
+  line-height: 1.4;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+/* Subscribe Section */
+.subscribe-section {
+  max-width: 300px;
+}
+
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.subscribe-input {
+  background: #222;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 12px 15px;
+  font-size: 14px;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.subscribe-input::placeholder {
+  color: #888;
+}
+
+.subscribe-input:focus {
+  border-color: #e74c3c;
+}
+
+.subscribe-button {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.subscribe-button:hover {
+  background: #c0392b;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 30px;
+}
+
+.footer-bottom-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.copyright {
+  color: #888;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 600px;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-bottom-links a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 300;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+  color: #fff;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 60px;
+  }
+  
+  .subscribe-section {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 5% 20px;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .footer-bottom-links {
+    justify-content: center;
+  }
+  
+  .subscribe-form {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-heading {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-links a {
+    font-size: 13px;
+  }
+  
+  .copyright {
+    font-size: 13px;
+  }
+  
+  .footer-bottom-links {
+    gap: 20px;
+  }
+  
+  .footer-bottom-links a {
+    font-size: 13px;
+  }
+  
+  .subscribe-button {
+    padding: 10px 15px;
+    font-size: 13px;
+  }
+  
+  .subscribe-input {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}
